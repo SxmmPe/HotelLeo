@@ -1,5 +1,7 @@
 package Controlador;
 
+import DAO.ConsumoDAO;
+import DAO.ConsumoDAOImpl;
 import Modelo.vconsumo;
 import Modelo.vhabitacion;
 import Modelo.vproducto;
@@ -12,11 +14,77 @@ import javax.swing.table.DefaultTableModel;
 
 public class fconsumo {
     
-   private conexion mysql=new conexion();
+    private final ConsumoDAO consumoDAO= new ConsumoDAOImpl();
+    public int totalregistros;
+    public double totalconsumo;
+    
+
+    public boolean insertar(vconsumo dts) {
+        return consumoDAO.insertar(dts);
+    }
+
+    public boolean editar(vconsumo dts) {
+        return consumoDAO.editar(dts);
+    }
+
+    public boolean eliminar(vconsumo dts) {
+        return consumoDAO.eliminar(dts);
+    }
+    private conexion mysql=new conexion();
    private Connection cn=mysql.conectar();
    private String sSQL="";
-   public Integer totalregistros;
-   public Double totalconsumo;
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
    public DefaultTableModel mostrar(String buscar){
@@ -58,98 +126,7 @@ public class fconsumo {
        } catch (Exception e) {
            JOptionPane.showConfirmDialog(null, e);
            return null;
-       }
-       
-       
+       }   
        
    } 
-   
-   public boolean insertar (vconsumo dts){
-       sSQL="insert into consumo (idreserva,idproducto,cantidad,precio_venta,estado)" +
-               "values (?,?,?,?,?)";
-       try {
-           
-           PreparedStatement pst=cn.prepareStatement(sSQL);
-           pst.setInt(1, dts.getIdreserva());
-           pst.setInt(2, dts.getIdproducto());
-           pst.setDouble(3, dts.getCantidad());
-           pst.setDouble(4, dts.getPrecio_venta());
-           pst.setString(5, dts.getEstado());
-           
-           
-           int n=pst.executeUpdate();
-           
-           if (n!=0){
-               return true;
-           }
-           else {
-               return false;
-           }
-           
-           
-           
-       } catch (Exception e) {
-           JOptionPane.showConfirmDialog(null, e);
-           return false;
-       }
-   }
-   
-   public boolean editar (vconsumo dts){
-       sSQL="update consumo set idreserva=?,idproducto=?,cantidad=?,precio_venta=?,estado=?"+
-               " where idconsumo=?";
-           
-       
-       try {
-           PreparedStatement pst=cn.prepareStatement(sSQL);
-           pst.setInt(1, dts.getIdreserva());
-           pst.setInt(2, dts.getIdproducto());
-           pst.setDouble(3, dts.getCantidad());
-           pst.setDouble(4, dts.getPrecio_venta());
-           pst.setString(5, dts.getEstado());
-           
-           pst.setInt(6, dts.getIdconsumo());
-           
-           int n=pst.executeUpdate();
-           
-           if (n!=0){
-               return true;
-           }
-           else {
-               return false;
-           }
-           
-       } catch (Exception e) {
-           JOptionPane.showConfirmDialog(null, e);
-           return false;
-       }
-   }
-  
-   public boolean eliminar (vconsumo dts){
-       sSQL="delete from consumo where idconsumo=?";
-       
-       try {
-           
-           PreparedStatement pst=cn.prepareStatement(sSQL);
-           
-           pst.setInt(1, dts.getIdconsumo());
-           
-           int n=pst.executeUpdate();
-           
-           if (n!=0){
-               return true;
-           }
-           else {
-               return false;
-           }
-           
-       } catch (Exception e) {
-           JOptionPane.showConfirmDialog(null, e);
-           return false;
-       }
-   }
-    
-    
-    
-    
-    
 }

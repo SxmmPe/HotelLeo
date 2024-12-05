@@ -4,10 +4,12 @@
  */
 package Vistas;
 
+import Conexion.conexion;
 import Modelo.vhabitacion;
 import Controlador.fhabitacion;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Component;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -583,6 +585,7 @@ public class panelhabitacion extends javax.swing.JPanel {
 
         }
     }//GEN-LAST:event_btneliminarActionPerformed
+private Connection connection = new conexion().conectar();
 
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
 

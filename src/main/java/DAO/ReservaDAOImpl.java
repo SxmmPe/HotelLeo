@@ -4,7 +4,7 @@
  */
 package DAO;
 
-import Controlador.conexion;
+import Conexion.conexion;
 import Modelo.vreserva;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -167,12 +168,7 @@ public class ReservaDAOImpl implements ReservaDAO {
            return false;
        }
    }
-   
-   
-   
-   
-   
-  
+
    public boolean eliminar (vreserva dts){
        sSQL="delete from reserva where idreserva=?";
        
@@ -196,7 +192,8 @@ public class ReservaDAOImpl implements ReservaDAO {
            return false;
        }
    }
-    
+   
+  
     
     
 }

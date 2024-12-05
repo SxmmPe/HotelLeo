@@ -1,6 +1,7 @@
 
 package Vistas;
 
+import Conexion.conexion;
 import Controlador.fconsumo;
 import Controlador.fhabitacion;
 import Controlador.fpago;
@@ -9,10 +10,23 @@ import Modelo.vhabitacion;
 import Modelo.vpago;
 import Modelo.vreserva;
 import java.awt.Component;
+import java.io.File;
+import java.sql.Connection;
 import java.sql.Date;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JREmptyDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperPrintManager;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -769,46 +783,47 @@ public class panelpagoss extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btneliminarActionPerformed
 
+    private Connection connection =new conexion().conectar();
+
     private void btnImprimirComprobanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirComprobanteActionPerformed
-        //        if (!txtidpago.getText().equals("")) {
-            //            Map p = new HashMap();
-            //            p.put("idpago", txtidpago.getText());
-            //            JasperReport report;
-            //            JasperPrint print;
-            //
-            //            try {
-                //                report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
-                    //                    + "/src/Reportes/rptComprobante.jrxml");
-                //                print = JasperFillManager.fillReport(report, p, connection);
-                //                JasperViewer view = new JasperViewer(print, false);
-                //                view.setTitle("Comprobante");
-                //                view.setVisible(true);
-                //
-                //            } catch (Exception e) {
-                //                e.printStackTrace();
-                //            }
-            //        }
+        if (!txtidpago.getText().equals("")) {
+            Map p = new HashMap();
+            p.put("idpago", txtidpago.getText());
+            JasperReport report;
+            JasperPrint print;
+
+            try {
+                report = JasperCompileManager.compileReport(new File("").getAbsolutePath() + ("/src/main/java/Reportes/ReporteReserva.jrxml"));
+                print = JasperFillManager.fillReport(report, p, connection);
+                JasperViewer view = new JasperViewer(print, false);
+                view.setTitle("Comprobante");
+                view.setVisible(true);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_btnImprimirComprobanteActionPerformed
 
     private void btnImprimirComprobanteConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirComprobanteConsumoActionPerformed
-        //        if (!txtidpago.getText().equals("")) {
-            //            Map p = new HashMap();
-            //            p.put("idpago", txtidpago.getText());
-            //            JasperReport report;
-            //            JasperPrint print;
-            //
-            //            try {
-                //                report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
-                    //                    + "/src/Reportes/rptComprobanteConsumo.jrxml");
-                //                print = JasperFillManager.fillReport(report, p, connection);
-                //                JasperViewer view = new JasperViewer(print, false);
-                //                view.setTitle("Comprobante");
-                //                view.setVisible(true);
-                //
-                //            } catch (Exception e) {
-                //                e.printStackTrace();
-                //            }
-            //        }
+        if (!txtidpago.getText().equals("")) {
+            Map p = new HashMap();
+            p.put("idpago", txtidpago.getText());
+            JasperReport report;
+            JasperPrint print;
+
+            try {
+                report = JasperCompileManager.compileReport(new File("").getAbsolutePath()
+                        + "/src/main/java/Reportes/ReporteGeneral.jrxml");
+                print = JasperFillManager.fillReport(report, p, connection);
+                JasperViewer view = new JasperViewer(print, false);
+                view.setTitle("Comprobante");
+                view.setVisible(true);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_btnImprimirComprobanteConsumoActionPerformed
 
     /**

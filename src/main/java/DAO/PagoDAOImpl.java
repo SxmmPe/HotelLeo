@@ -4,7 +4,7 @@
  */
 package DAO;
 
-import Controlador.conexion;
+import Conexion.conexion;
 import Modelo.vpago;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

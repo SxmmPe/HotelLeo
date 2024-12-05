@@ -36,22 +36,11 @@ public class panelreservass extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jbPagos = new javax.swing.JButton();
         jbReservas = new javax.swing.JButton();
         contenedor = new javax.swing.JPanel();
         jbClientes = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jbPagos.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jbPagos.setText("Pagos");
-        jbPagos.setBorder(null);
-        jbPagos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jbPagos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbPagosActionPerformed(evt);
-            }
-        });
 
         jbReservas.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jbReservas.setText("Reservas");
@@ -95,9 +84,7 @@ public class panelreservass extends javax.swing.JPanel {
                 .addComponent(jbReservas, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(729, Short.MAX_VALUE))
+                .addContainerGap(810, Short.MAX_VALUE))
             .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -105,7 +92,6 @@ public class panelreservass extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbReservas, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(jbPagos, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                     .addComponent(jbClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -127,10 +113,6 @@ public class panelreservass extends javax.swing.JPanel {
         ShowJPanel(pr);
     }//GEN-LAST:event_jbReservasActionPerformed
 
-    private void jbPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPagosActionPerformed
-        //ShowJPanel(pg);
-    }//GEN-LAST:event_jbPagosActionPerformed
-
     private void jbClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbClientesActionPerformed
         ShowJPanel(pc);
     }//GEN-LAST:event_jbClientesActionPerformed
@@ -140,7 +122,6 @@ public class panelreservass extends javax.swing.JPanel {
     private javax.swing.JPanel contenedor;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbClientes;
-    private javax.swing.JButton jbPagos;
     private javax.swing.JButton jbReservas;
     // End of variables declaration//GEN-END:variables
 }

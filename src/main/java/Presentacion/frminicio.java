@@ -18,9 +18,6 @@ import javax.swing.JPanel;
 
 public class frminicio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frminicio
-     */
     panelhabitacion pa = new panelhabitacion();
     panelproductos pp = new panelproductos();
     panelreserva pr = new panelreserva();
@@ -42,11 +39,8 @@ public class frminicio extends javax.swing.JFrame {
     }
     
     public void Fecha(){
-        // Formatear la fecha actual
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
         String fechaActual = formatoFecha.format(new Date());
-        
-        // Establecer la fecha en el JLabel
         fecha.setText(fechaActual);
     }
     /**
@@ -60,13 +54,13 @@ public class frminicio extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         btnInicio = new javax.swing.JButton();
         btnArchivo = new javax.swing.JButton();
         btnReservas = new javax.swing.JButton();
         btnConsultas = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         lblidpersona = new javax.swing.JLabel();
         lblapaterno = new javax.swing.JLabel();
@@ -83,20 +77,16 @@ public class frminicio extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(147, 109, 25));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
 
-        jLabel3.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("HOTEL LEO");
-
-        btnInicio.setBackground(new java.awt.Color(147, 109, 25));
+        btnInicio.setBackground(new java.awt.Color(0, 51, 0));
         btnInicio.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnInicio.setForeground(new java.awt.Color(255, 255, 255));
         btnInicio.setText("INICIO");
         btnInicio.setBorder(null);
         btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnArchivo.setBackground(new java.awt.Color(147, 109, 25));
+        btnArchivo.setBackground(new java.awt.Color(0, 51, 51));
         btnArchivo.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnArchivo.setForeground(new java.awt.Color(255, 255, 255));
         btnArchivo.setText("ARCHIVO");
@@ -108,7 +98,7 @@ public class frminicio extends javax.swing.JFrame {
             }
         });
 
-        btnReservas.setBackground(new java.awt.Color(147, 109, 25));
+        btnReservas.setBackground(new java.awt.Color(0, 51, 0));
         btnReservas.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnReservas.setForeground(new java.awt.Color(255, 255, 255));
         btnReservas.setText("RESERVAS");
@@ -120,7 +110,7 @@ public class frminicio extends javax.swing.JFrame {
             }
         });
 
-        btnConsultas.setBackground(new java.awt.Color(147, 109, 25));
+        btnConsultas.setBackground(new java.awt.Color(0, 51, 51));
         btnConsultas.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnConsultas.setForeground(new java.awt.Color(255, 255, 255));
         btnConsultas.setText("CONSULTAS");
@@ -132,7 +122,7 @@ public class frminicio extends javax.swing.JFrame {
             }
         });
 
-        btnEmpleados.setBackground(new java.awt.Color(147, 109, 25));
+        btnEmpleados.setBackground(new java.awt.Color(0, 51, 51));
         btnEmpleados.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnEmpleados.setForeground(new java.awt.Color(255, 255, 255));
         btnEmpleados.setText("EMPLEADOS");
@@ -144,33 +134,42 @@ public class frminicio extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBackground(new java.awt.Color(147, 109, 25));
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("HOTEL LEO");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel3)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 114, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(147, 109, 25));
+        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
 
         lblidpersona.setForeground(new java.awt.Color(147, 109, 25));
 
         lblapaterno.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        lblapaterno.setForeground(new java.awt.Color(147, 109, 25));
+        lblapaterno.setForeground(new java.awt.Color(255, 255, 255));
         lblapaterno.setText("jLabel3");
 
         lblamaterno.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        lblamaterno.setForeground(new java.awt.Color(147, 109, 25));
+        lblamaterno.setForeground(new java.awt.Color(255, 255, 255));
         lblamaterno.setText("jLabel4");
 
         lblacceso.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        lblacceso.setForeground(new java.awt.Color(147, 109, 25));
+        lblacceso.setForeground(new java.awt.Color(255, 255, 255));
         lblacceso.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -178,40 +177,40 @@ public class frminicio extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblapaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblamaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblacceso))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblacceso, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(lblamaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblapaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(lblidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(lblapaterno)
-                        .addGap(35, 35, 35)
-                        .addComponent(lblamaterno)
-                        .addGap(33, 33, 33)
-                        .addComponent(lblacceso)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblidpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblamaterno))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(lblacceso)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(32, 32, 32))
             .addComponent(btnInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnArchivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnReservas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -226,9 +225,7 @@ public class frminicio extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(76, 76, 76)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,11 +248,11 @@ public class frminicio extends javax.swing.JFrame {
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1220, Short.MAX_VALUE)
+            .addGap(0, 1168, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 616, Short.MAX_VALUE)
+            .addGap(0, 601, Short.MAX_VALUE)
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -283,7 +280,7 @@ public class frminicio extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(67, 67, 67)
                 .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(470, Short.MAX_VALUE))
+                .addContainerGap(457, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

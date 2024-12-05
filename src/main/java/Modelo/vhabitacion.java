@@ -11,7 +11,8 @@ public class vhabitacion {
     private String estado;
     private String tipo_habitacion;
 
-    public vhabitacion(int idhabitacion, String numero, String piso, String descripcion, String caracteristicas, Double precio_diario, String estado, String tipo_habitacion) {
+    public vhabitacion(int idhabitacion, String numero, String piso, String descripcion, 
+            String caracteristicas, Double precio_diario, String estado, String tipo_habitacion) {
         this.idhabitacion = idhabitacion;
         this.numero = numero;
         this.piso = piso;

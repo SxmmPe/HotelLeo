@@ -4,7 +4,7 @@
  */
 package DAO;
 
-import Controlador.conexion;
+import Conexion.conexion;
 import Modelo.vhabitacion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -250,23 +250,19 @@ public class HabitacionDAOImpl implements HabitacionDAO {
   
  public vhabitacion buscarPorId(int idhabitacion) {
     vhabitacion habitacion = null;
-    String sql = "SELECT * FROM habitacion WHERE idhabitacion = ?"; // Consulta SQL para buscar por ID
+    String sql = "SELECT * FROM habitacion WHERE idhabitacion = ?"; 
 
-    try ( // Obtener conexión a la base de datos
+    try ( 
          PreparedStatement pst = cn.prepareStatement(sql)) {
 
-        // Establecer el parámetro de la consulta (idhabitacion)
         pst.setInt(1, idhabitacion);
 
-        // Ejecutar la consulta
         ResultSet rs = pst.executeQuery();
 
         if (rs.next()) {
-            // Si se encuentra una habitación, crear el objeto vhabitacion y asignar los valores
             habitacion = new vhabitacion();
             habitacion.setIdhabitacion(rs.getInt("idhabitacion"));
             habitacion.setPrecio_diario(rs.getDouble("precio_diario"));
-            // Aquí puedes agregar más propiedades si las necesitas
         }
 
     } catch (SQLException e) {

@@ -1,5 +1,6 @@
 package Controlador;
 
+import Conexion.conexion;
 import DAO.ConsumoDAO;
 import DAO.ConsumoDAOImpl;
 import Modelo.vconsumo;

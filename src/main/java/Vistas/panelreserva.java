@@ -25,7 +25,7 @@ public class panelreserva extends javax.swing.JPanel {
     public panelreserva() {
         initComponents();
         FlatLightLaf.setup();
-         mostrar("");
+        mostrar("");
         inhabilitar();
         
     }

@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class fcliente {
 
-     private final ClienteDAO clienteDAO = new ClienteDAOImpl();
+    private final ClienteDAO clienteDAO = new ClienteDAOImpl();
     public Integer totalregistros;
 
     public DefaultTableModel mostrar(String buscar) {
